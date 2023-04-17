@@ -3,12 +3,34 @@ This project is test automation of the [ServeRest](https://serverest.dev/#/Usu%C
 
 The API automated tests is developed with [Robot Framework](https://robotframework.org/), [Requests Library](http://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) and Python.
 
-The ServeRest API has some endpoints to register, search and even delete information. The endpoints are:
+[//]: # (The ServeRest API has some endpoints to register, search and even delete information. The endpoints are:)
 
-- /login;
-- /usuarios;
-- /products;
-- /carrinhos.
+[//]: # ()
+[//]: # (- /login;)
+
+[//]: # (- /usuarios;)
+
+[//]: # (- /products;)
+
+[//]: # (- /carrinhos.)
+
+## How to use
+To use this project, clone it on your machine and open it on your favorite IDE.
+
+In the [/tests](https://github.com/tiagocbarbosa/serverest-api-robotframework/tree/main/tests) dir you will find the Tests Scenarios of the API; in the [/resources](https://github.com/tiagocbarbosa/serverest-api-robotframework/tree/main/resources) you will find the scenarios' definition.
+
+To execute the application, check if you have downloaded and configured Python, Robot Framework and the RequestsLibrary on your machine. To more information, check the [References](https://github.com/tiagocbarbosa/serverest-api-robotframework#References) section.
+
+Open your favorite terminal and execute the command ``robot -d results/ tests/``, the output must be something similar to it:
+
+{to do: add the output}
+
+You can see the tests report by opening the file ``/results/report.html`` that will be created after the tests execution.
+
+## Technologies
+- Robot Framework;
+- RequestsLibrary;
+- Python.
 
 ## References
 [ServeRest](https://serverest.dev/)
