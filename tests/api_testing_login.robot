@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../resources/api_testing_login.resource
-Resource    ../resources/api_testing_usuario.resource
 
 *** Test Cases ***
 Scenario 01: Login with a new user successfully

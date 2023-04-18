@@ -1,26 +1,9 @@
 *** Settings ***
-Library    String
 Library     RequestsLibrary
 Library    Collections
 Resource    commons.resource
 
 *** Keywords ***
-Create a new user
-    Set Test Variable    ${NAME}    JOÃO DA SILVA
-    ${random_string}  Generate Random String  length=8    chars=[LETTERS][LOWER]
-    Set Test Variable   ${EMAIL}  ${random_string}@email.com
-    Set Test Variable    ${PASSWORD}    1234
-    Set Test Variable    ${ADMINISTRATOR}   true
-    &{user}     Create Dictionary   nome=${NAME}    email=${EMAIL}  password=${PASSWORD}
-    ...     administrador=${ADMINISTRATOR}
-    Set Test Variable    &{USER}    &{user}
-
-Register user
-    [Arguments]     ${expected_status}  &{user}
-    Create ServeRest session
-    ${response}     Post On Session  alias=ServeRest  url=/usuarios  json=&{user}   expected_status=${expected_status}
-    RETURN  ${response}
-
 Register the new user on ServeRest
     ${response}     Register user   201     &{USER}
     Set Test Variable    ${REGISTER_USER_RESPONSE}   ${response}
