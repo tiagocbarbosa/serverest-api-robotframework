@@ -2,6 +2,7 @@
 Library    String
 Library     RequestsLibrary
 Library    Collections
+Resource    commons.resource
 
 *** Keywords ***
 Create a new user
@@ -13,10 +14,6 @@ Create a new user
     &{user}     Create Dictionary   nome=${NAME}    email=${EMAIL}  password=${PASSWORD}
     ...     administrador=${ADMINISTRATOR}
     Set Test Variable    &{USER}    &{user}
-
-Create ServeRest session
-    &{headers}  Create Dictionary   accept=application/json     Content-Type=application/json
-    Create Session    alias=ServeRest    url=https://serverest.dev/  disable_warnings=1  headers=&{headers}
 
 Register user
     [Arguments]     ${expected_status}  &{user}
@@ -47,3 +44,8 @@ Search for the user on ServeRest
 
 Check if the user was successfully searched
     Should Be Equal As Integers     ${SEARCH_USER_BY_ID_RESPONSE.status_code}    200
+    Dictionary Should Contain Item  ${SEARCH_USER_BY_ID_RESPONSE.json()}    nome    JOÃO DA SILVA
+    Dictionary Should Contain Item  ${SEARCH_USER_BY_ID_RESPONSE.json()}    email    ${EMAIL}
+    Dictionary Should Contain Item  ${SEARCH_USER_BY_ID_RESPONSE.json()}    password    1234
+    Dictionary Should Contain Item  ${SEARCH_USER_BY_ID_RESPONSE.json()}    administrador    true
+    Dictionary Should Contain Item  ${SEARCH_USER_BY_ID_RESPONSE.json()}    _id    ${REGISTER_USER_RESPONSE.json()}[_id]
