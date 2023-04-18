@@ -1,7 +1,7 @@
 # serverest-api-robotframework
-This project is test automation of the [ServeRest](https://serverest.dev/#/Usu%C3%A1rios/post_usuarios), a free REST API that simulates a virtual store. Its purpose is to be used as a study of API tests.
+The project is a test automation of the [ServeRest](https://serverest.dev/#/Usu%C3%A1rios/post_usuarios), a free REST API that simulates a virtual store and was developed to be used as a study of API tests.
 
-The API automated tests is developed with [Robot Framework](https://robotframework.org/), [Requests Library](http://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) and Python.
+The API automated tests uses [Robot Framework](https://robotframework.org/), [Requests Library](http://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) and Python technologies.
 
 [//]: # (The ServeRest API has some endpoints to register, search and even delete information. The endpoints are:)
 
