@@ -3,16 +3,6 @@ The project is a test automation of the [ServeRest](https://serverest.dev/#/Usu%
 
 The API automated tests uses [Robot Framework](https://robotframework.org/), [Requests Library](http://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) and Python technologies.
 
-[//]: # (The ServeRest API has some endpoints to register, search and even delete information. The endpoints are:)
-
-[//]: # ()
-[//]: # (- /login;)
-
-[//]: # (- /usuarios;)
-
-[//]: # (- /products;)
-
-[//]: # (- /carrinhos.)
 
 ## How to use
 To use this project, clone it on your machine and open it on your favorite IDE.
@@ -23,7 +13,35 @@ To execute the application, check if you have downloaded and configured Python, 
 
 Open your favorite terminal and execute the command ``robot -d results/ tests/``, the output must be something similar to it:
 
-{to do: add the output}
+`````shell
+==============================================================================
+Tests
+==============================================================================
+Tests.Api Testing Login
+==============================================================================
+Scenario 01: Login with a new user successfully                       | PASS |
+------------------------------------------------------------------------------
+Tests.Api Testing Login                                               | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Tests.Api Testing Usuario
+==============================================================================
+Scenario 01: Register a new user successfully on ServeRest            | PASS |
+------------------------------------------------------------------------------
+Scenario 02: Register an existing email on ServeRest                  | PASS |
+------------------------------------------------------------------------------
+Scenario 03: Register and search successfully a new user on ServeRest | PASS |
+------------------------------------------------------------------------------
+Tests.Api Testing Usuario                                             | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  C:\{dir}\serverest-api-robotframework\results\output.xml
+Log:     C:\{dir}\serverest-api-robotframework\results\log.html
+Report:  C:\{dir}\serverest-api-robotframework\results\report.html
+`````
 
 You can see the tests report by opening the file ``/results/report.html`` that will be created after the tests execution.
 
