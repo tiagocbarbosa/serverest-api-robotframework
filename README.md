@@ -5,45 +5,18 @@ The API automated tests uses [Robot Framework](https://robotframework.org/), [Re
 
 
 ## How to use
-To use this project, clone it on your machine and open it on your favorite IDE.
+To use this automation, clone the project on your machine and open it on your favorite IDE.
 
-In the [/tests](https://github.com/tiagocbarbosa/serverest-api-robotframework/tree/main/tests) dir you will find the Tests Scenarios of the API; in the [/resources](https://github.com/tiagocbarbosa/serverest-api-robotframework/tree/main/resources) you will find the scenarios' definition.
+he tests cases of the web application are located in the [/tests](https://github.com/tiagocbarbosa/serverest-api-robotframework/tree/main/tests) dir, and the keywords definitions are in the [/resources](https://github.com/tiagocbarbosa/serverest-api-robotframework/tree/main/resources).
 
-To execute the application, check if you have downloaded and configured Python, Robot Framework and the RequestsLibrary on your machine. To more information, check the [References](https://github.com/tiagocbarbosa/serverest-api-robotframework#References) section.
+To execute the automation, you can run the robot -d results/ tests/ command. The option -d results/ saves the evidences in the results/ dir; the tests/ option runs the test cases from the tests/ dir.
 
-Open your favorite terminal and execute the command ``robot -d results/ tests/``, the output must be something similar to it:
+Other commands:
 
-`````shell
-==============================================================================
-Tests
-==============================================================================
-Tests.Api Testing Login
-==============================================================================
-Scenario 01: Login with a new user successfully                       | PASS |
-------------------------------------------------------------------------------
-Tests.Api Testing Login                                               | PASS |
-1 test, 1 passed, 0 failed
-==============================================================================
-Tests.Api Testing Usuario
-==============================================================================
-Scenario 01: Register a new user successfully on ServeRest            | PASS |
-------------------------------------------------------------------------------
-Scenario 02: Register an existing email on ServeRest                  | PASS |
-------------------------------------------------------------------------------
-Scenario 03: Register and search successfully a new user on ServeRest | PASS |
-------------------------------------------------------------------------------
-Tests.Api Testing Usuario                                             | PASS |
-3 tests, 3 passed, 0 failed
-==============================================================================
-Tests                                                                 | PASS |
-4 tests, 4 passed, 0 failed
-==============================================================================
-Output:  C:\{dir}\serverest-api-robotframework\results\output.xml
-Log:     C:\{dir}\serverest-api-robotframework\results\log.html
-Report:  C:\{dir}\serverest-api-robotframework\results\report.html
-`````
+- `robot -d results/ tests/api_testing_usuario.robot` -> run the tests cases defined in the `api_testing_usuario.robot` file;
+- `robot -d results/ -i CREATE tests/` -> run the test cases defined with the `CREATE` tag.
 
-You can see the tests report by opening the file ``/results/report.html`` that will be created after the tests execution.
+After you execute the automation, you can check the result of the tests on the `report.html` file that will be created in the `results/` dir.
 
 ## Technologies
 - Robot Framework;
