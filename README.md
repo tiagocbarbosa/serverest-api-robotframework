@@ -1,4 +1,10 @@
 # serverest-api-robotframework
+:construction_worker::construction: This README is being updated! :construction::construction_worker:
+
+...
+
+# Oldest README version
+
 The project is a test automation of the [ServeRest](https://serverest.dev/#/Usu%C3%A1rios/post_usuarios), a free REST API that simulates a virtual store and was developed to be used as a study of API tests.
 
 The API automated tests uses [Robot Framework](https://robotframework.org/), [Requests Library](http://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) and Python technologies.
