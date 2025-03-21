@@ -5,7 +5,7 @@ Resource  ../../keywords/backend/users-keywords.robot
 
 *** Test Cases ***
 Login with user
-  [Tags]  LOGIN  POSITIVE
+  [Tags]  POSITIVE
   ${randomText} =  Generate Random String  length=5  chars=[LOWER]
   ${user} =  Create Dictionary  nome=John
   ...  email=john${randomText}@gmail.com
@@ -18,7 +18,7 @@ Login with user
   Check response of login user  ${loginResponse}
 
 Login with invalid credential
-  [Tags]  LOGIN  NEGATIVE
+  [Tags]  NEGATIVE
   ${randomText} =  Generate Random String  length=5  chars=[LOWER]
   ${user} =  Create Dictionary  email=notRegistered_${randomText}@gmail.com
   ...  password=123456
